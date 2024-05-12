@@ -7,7 +7,7 @@
 
 .container {
     width: 100%;
-    min-height: 100vh; /* Using min-height for smaller screens */
+    height: 100vh;
     background-image: url(./images/background.png);
     background-position: center;
     background-size: cover;
@@ -19,7 +19,6 @@ nav {
     width: 100%;
     padding: 20px 0;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -29,12 +28,12 @@ nav {
 }
 
 nav ul {
-    display: flex;
+    flex: 1;
 }
 
 nav ul li {
-    margin-left: 20px;
-    list-style: none;
+    display: inline-block;
+    margin: 10px 20px;
 }
 
 nav ul li a {
@@ -65,7 +64,7 @@ nav .btn {
 
 .content p {
     line-height: 22px;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .content .btn {
@@ -79,17 +78,18 @@ nav .btn {
 }
 
 .coin-list {
+    position: absolute;
+    right: 10%;
+    bottom: 20px;
     display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap; /* Allow coins to wrap to the next line on smaller screens */
-    max-width: 100%; /* Ensure coins take up full width on smaller screens */
+    align-items: center;
 }
 
 .coin {
     display: flex;
     align-items: center;
-    font-size: 16px;
-    margin: 0 15px 15px 0; /* Add margin to separate coins and ensure they wrap properly */
+    font-size: 14px;
+    margin: 0 15px;
     color: #ff960b;
     border: 1px solid #fff;
     padding: 20px 30px;
@@ -106,19 +106,22 @@ nav .btn {
     margin-bottom: 5px;
 }
 
-/* Mobile styles */
-@media only screen and (max-width: 768px) {
+
+@media only screen and (max-width: 1080px) {
     .container {
         padding: 0 5%;
     }
+
     .content {
         margin-top: 20%;
     }
+
     .content h1 {
         font-size: 60px;
     }
+
     .coin-list {
-        justify-content: flex-start; /* Align coins to the start on smaller screens */
-        margin-top: 20px; /* Add some space between content and coins */
+        right: 5%;
+        bottom: 10px;
     }
 }
