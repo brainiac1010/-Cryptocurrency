@@ -6,9 +6,8 @@
 }
 
 .container {
-
     width: 100%;
-    height: 100vh;
+    min-height: 100vh; /* Using min-height for smaller screens */
     background-image: url(./images/background.png);
     background-position: center;
     background-size: cover;
@@ -17,10 +16,10 @@
 }
 
 nav {
-
     width: 100%;
     padding: 20px 0;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -30,13 +29,12 @@ nav {
 }
 
 nav ul {
-    flex: 1;
-
+    display: flex;
 }
 
 nav ul li {
-    display: inline-block;
-    margin: 10px 20px;
+    margin-left: 20px;
+    list-style: none;
 }
 
 nav ul li a {
@@ -59,17 +57,15 @@ nav .btn {
 .content h1 {
     font-size: 88px;
     margin-bottom: 15px;
-
 }
 
 .content h1 span {
-
     color: #ff960b;
 }
 
 .content p {
     line-height: 22px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .content .btn {
@@ -83,18 +79,17 @@ nav .btn {
 }
 
 .coin-list {
-    position: absolute;
-    right: 10%;
-    bottom: 50px;
     display: flex;
-    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap; /* Allow coins to wrap to the next line on smaller screens */
+    max-width: 100%; /* Ensure coins take up full width on smaller screens */
 }
 
 .coin {
     display: flex;
     align-items: center;
-    font-size: 14px;
-    margin: 0 15px;
+    font-size: 16px;
+    margin: 0 15px 15px 0; /* Add margin to separate coins and ensure they wrap properly */
     color: #ff960b;
     border: 1px solid #fff;
     padding: 20px 30px;
@@ -104,9 +99,26 @@ nav .btn {
 .coin img {
     width: 40px;
     margin-right: 10px;
-    
 }
-.coin h3{
+
+.coin h3 {
     color: #fff;
     margin-bottom: 5px;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 0 5%;
+    }
+    .content {
+        margin-top: 20%;
+    }
+    .content h1 {
+        font-size: 60px;
+    }
+    .coin-list {
+        justify-content: flex-start; /* Align coins to the start on smaller screens */
+        margin-top: 20px; /* Add some space between content and coins */
+    }
 }
