@@ -6,6 +6,7 @@
 }
 
 .container {
+
     width: 100%;
     height: 100vh;
     background-image: url(./images/background.png);
@@ -16,6 +17,7 @@
 }
 
 nav {
+
     width: 100%;
     padding: 20px 0;
     display: flex;
@@ -29,6 +31,7 @@ nav {
 
 nav ul {
     flex: 1;
+
 }
 
 nav ul li {
@@ -56,9 +59,11 @@ nav .btn {
 .content h1 {
     font-size: 88px;
     margin-bottom: 15px;
+
 }
 
 .content h1 span {
+
     color: #ff960b;
 }
 
@@ -80,7 +85,7 @@ nav .btn {
 .coin-list {
     position: absolute;
     right: 10%;
-    bottom: 20px;
+    bottom: 50px;
     display: flex;
     align-items: center;
 }
@@ -99,29 +104,9 @@ nav .btn {
 .coin img {
     width: 40px;
     margin-right: 10px;
+    
 }
-
-.coin h3 {
+.coin h3{
     color: #fff;
     margin-bottom: 5px;
-}
-
-
-@media only screen and (max-width: 1080px) {
-    .container {
-        padding: 0 5%;
-    }
-
-    .content {
-        margin-top: 20%;
-    }
-
-    .content h1 {
-        font-size: 60px;
-    }
-
-    .coin-list {
-        right: 5%;
-        bottom: 10px;
-    }
-}
+} 
